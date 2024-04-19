@@ -14,7 +14,7 @@ var fizzBuzz = function(n) {
         }else if(i%5==0){
             output.push("Buzz")
         }else{
-            output.push(i.toString())
+            output.push(i + "")
         }
     }
 
