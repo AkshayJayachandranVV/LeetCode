@@ -11,10 +11,8 @@ var numberOfSpecialChars = function(word) {
     let setValue=[...new Set(splitValue)]
   for(let i=0;i<setValue.length;i++){
       if(letters.includes(setValue[i])){
-        console.log(setValue[i])
         let lower=setValue[i].toLowerCase()
         if(setValue.includes(lower)){
-            console.log(lower)
             count++
         }
     }
