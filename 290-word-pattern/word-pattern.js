@@ -9,9 +9,6 @@ var wordPattern = function(pattern, s) {
   let PatternSet=[...new Set(pattern.split(""))]
   let sSet=[...new Set(strs)]
 
-  console.log(PatternSet)
-  console.log(sSet)
-
   if(pattern.length!=strs.length){
     return false
     }
