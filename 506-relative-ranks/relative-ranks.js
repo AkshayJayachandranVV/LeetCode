@@ -5,7 +5,6 @@
 var findRelativeRanks = function(score) {
     
     let sortArray=[...score].sort((a,b)=>b-a)
-    console.log(sortArray)
     let rank=[]
     for(let i=0;i<sortArray.length;i++){
         let index=score.indexOf(sortArray[i])
