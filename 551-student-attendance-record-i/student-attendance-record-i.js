@@ -8,11 +8,9 @@ var checkRecord = function(s) {
 
     for(let i=0;i<s.length;i++){
         if(s[i]=='A'){
-            console.log(s[i])
            absentCount++
         }
         if(absentCount>2){
-            console.log(absentCount)
             return false
         }
 
@@ -20,7 +18,6 @@ var checkRecord = function(s) {
             late=true
         }
     }
-    console.log(late +" "+ absentCount)
 
     if(late==false && absentCount<2){
         return true
