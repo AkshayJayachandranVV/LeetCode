@@ -4,12 +4,12 @@
  */
 var checkPerfectNumber = function(num) {
 
-    let count=0
+    let sum=0
     for(let i=1;i<=num/2;i++){
         if(num%i==0){
-            count+=i
+            sum+=i
         }
     }
-    return num==count
+    return num==sum
     
 };
