@@ -5,11 +5,9 @@
 var reverseOnlyLetters = function(s) {
     
     let count=0,copy='',array=[]
-    // console.log(s[s.length-1])
     for(let i=s.length-1;i>=0;i--){
         if(/[a-zA-Z]/.test(s[i])){
             array.push(s[i])
-            console.log(s[i] + "firtrtrtt")
         }
     }
 
