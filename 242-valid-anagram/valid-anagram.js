@@ -6,23 +6,26 @@
 var isAnagram = function(s, t) {
 
     if(t.length!==s.length) return false
-    
-    let tSplit=t.split("")
 
+    let sCount={}
+    let tCount={}
+    
     for(let i=0;i<s.length;i++){
-        if(tSplit.includes(s[i])){
-            let index=tSplit.indexOf(s[i])
-            tSplit.splice(index,1)
+        if(s[i] in sCount){
+            sCount[s[i]]++
+        }else{
+            sCount[s[i]]=1
+        }
+
+        if(t[i] in tCount){
+            tCount[t[i]]++
+        }else{
+            tCount[t[i]]=1
         }
     }
 
-    if(tSplit.length>0){
-        return false
-    }else{
-        return true
+    for(let i in sCount){
+        if(sCount[i]!==tCount[i]) return false
     }
-       
-
-    
-
+   return true
 };
