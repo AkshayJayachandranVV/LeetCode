@@ -10,13 +10,9 @@ var search = function(nums, target) {
     let left=0
     let right=nums.length
 
-    console.log(nums)
-
     while(left<=right){
 
         let mid=Math.floor((left+right)/2)
-
-        console.log(nums[mid])
 
         if(nums[mid]==target){
             return true
