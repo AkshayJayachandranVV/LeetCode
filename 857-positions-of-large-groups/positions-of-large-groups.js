@@ -10,7 +10,6 @@ var largeGroupPositions = function(s) {
         if(s[i]==s[i-1]){
             count++
         }else{
-            console.log(count + " "+ s[i-1])
              if(count>=3){
                 array.push([start,i-1])
              }
