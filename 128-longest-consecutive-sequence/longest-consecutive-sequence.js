@@ -3,6 +3,8 @@
  * @return {number}
  */
 var longestConsecutive = function(nums) {
+    if(!nums.length) return 0;
+    
     nums=new Set(nums)
     nums = Array.from(nums);
     nums.sort((a,b)=>a-b)
