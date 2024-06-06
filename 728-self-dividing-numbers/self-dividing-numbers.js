@@ -13,14 +13,14 @@ var selfDividingNumbers = function(left, right) {
     return res;
 };
 
-var checkNumber = (num) => {
-    let temp = num;
-    while(temp > 1){
-       let rem = Math.floor(temp % 10);
-        if(num % rem != 0){
-            return false;
+var checkNumber=(num)=>{
+    let temp=num
+    while(temp>1){
+        let rem=Math.floor(temp%10)
+        if(num%rem!==0){
+            return false
         }
-       temp /=10;
+        temp=temp/10
     }
-    return true;
+    return true
 }
