@@ -12,23 +12,25 @@
  */
 var removeNthFromEnd = function(head, n) {
 
-    let dummy={next:head}
-    let curr=head
-    let len=0
+  let dummy={next:head}
+  let curr=dummy
+  let len=0
 
-    while(curr){
-        len++
-        curr=curr.next
-    }
+  while(curr){
+    len++
+    curr=curr.next
+  }
 
-    let ittr=dummy
+  console.log(len)
+  let ittr=dummy
 
-    for(let i=0;i<len-n;i++){
-         ittr=ittr.next
-    }
+  for(let i=0;i<(len-n)-1;i++){
+    ittr=ittr.next
+  }
+   
+   let remove=ittr.next
+   ittr.next=remove.next
 
-    ittr.next=ittr.next.next
-
-    return dummy.next
+   return dummy.next
     
 };
