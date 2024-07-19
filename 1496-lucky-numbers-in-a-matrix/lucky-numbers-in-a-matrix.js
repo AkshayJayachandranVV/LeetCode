@@ -13,6 +13,7 @@ var luckyNumbers  = function(matrix) {
         for(let j=0;j<matrix.length;j++){
             if(minVal<matrix[j][index]){
                 flag=1
+                break
             }
         }
         if(flag==0){
