@@ -11,10 +11,7 @@ var luckyNumbers  = function(matrix) {
         let minVal=Math.min(...matrix[i])
         let index=matrix[i].indexOf(minVal)
         for(let j=0;j<matrix.length;j++){
-            console.log(minVal + " lllllll")
-            console.log(matrix[j][index])
             if(minVal<matrix[j][index]){
-                console.log("hjyyyy")
                 flag=1
             }
         }
