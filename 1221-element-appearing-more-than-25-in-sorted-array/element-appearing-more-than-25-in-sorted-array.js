@@ -8,17 +8,17 @@ var findSpecialInteger = function(arr) {
 
     if(arr.length==1) return arr[0]
     
-    for(let i=0;i<arr.length;i++){
-        if(arr[i] == arr[i+1]){
+     for(let i=0;i<arr.length;i++){
+         if(arr[i] == arr[i+1]){
             count++
-        }else{
+         }else{
             if(count>max){
                max=count
                num=arr[i]
             }
             count=0
-        }
-    }
+         }
+     }
 
     return num
 
