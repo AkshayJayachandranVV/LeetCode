@@ -12,7 +12,6 @@ var findSpecialInteger = function(arr) {
         if(arr[i] == arr[i+1]){
             count++
         }else{
-        console.log(count ,arr[i] , " uuuuuuuuuuuuuuuu")
             if(count>max){
                max=count
                num=arr[i]
