@@ -6,8 +6,6 @@ var uniqueOccurrences = function(arr) {
 
     arr.sort((a,b)=>a-b)
 
-    console.log(arr)
-
     let count=0,array=[]
 
     for(let i=0;i<arr.length;i++){
@@ -20,8 +18,6 @@ var uniqueOccurrences = function(arr) {
     }
 
     let setArr=[...new Set(array)]
-
-    console.log(setArr , array)
 
     return setArr.length==array.length
     
