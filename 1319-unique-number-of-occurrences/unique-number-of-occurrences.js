@@ -4,21 +4,20 @@
  */
 var uniqueOccurrences = function(arr) {
 
-    arr.sort((a,b)=>a-b)
+  let map=new Map()
 
-    let count=0,array=[]
+  for(let i=0;i<arr.length;i++){
+      if(map.has(arr[i])){
+        map.set(arr[i],map.get(arr[i])+1)
+      }else{
+        map.set(arr[i],1)
+      }
+  }
 
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]==arr[i+1]){
-            count++;
-        }else{
-            array.push(count)
-            count=0
-        }
-    }
+  let values=[...map.values()]
 
-    let setArr=[...new Set(array)]
+  let setArr=[...new Set(values)]
 
-    return setArr.length==array.length
-    
+  return values.length == setArr.length
+
 };
