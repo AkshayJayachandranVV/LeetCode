@@ -15,7 +15,6 @@ var minSwaps = function(nums) {
     let max1s=onesPart
 
     for(let i=0;i<n;i++){
-         console.log(nums[(oneSize + i) % n] )
         if(nums[(oneSize + i) % n] ==1){
             onesPart++
         }
