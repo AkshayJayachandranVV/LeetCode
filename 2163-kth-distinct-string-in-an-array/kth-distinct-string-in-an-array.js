@@ -5,17 +5,31 @@
  */
 var kthDistinct = function(arr, k) {
 
-    let count=0
+   let map = new Map()
 
-    for(let i=0;i<arr.length;i++){
-        if(arr.indexOf(arr[i]) == arr.lastIndexOf(arr[i])){
-           count++
-           if(count==k){
-              return arr[i]
-           } 
+   for(let i=0;i<arr.length;i++){
+       if(map.has(arr[i])){
+            map.set(arr[i], map.get(arr[i]) + 1)
+       }else{
+        map.set(arr[i],1)
+       }
+   }
+
+   let mapArray=Array.from(map.entries())
+   let result=[]
+
+   for(let [key,value] of mapArray){
+        if(value == 1){
+            result.push(key)
         }
-    }
+   }
 
-    return ""
+   let index=k-1
+
+   if(result.length<k){
+        return ""
+   }else{
+        return result[index]
+   }
     
 };
