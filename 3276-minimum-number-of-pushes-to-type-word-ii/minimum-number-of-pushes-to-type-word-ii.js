@@ -17,8 +17,6 @@ var minimumPushes = function (word) {
 
     let mapArray = Array.from(map.entries())
 
-    console.log(mapArray)
-
     let sortArray = mapArray.sort((a, b) => b[1] - a[1])
 
     let total = 0, value = 0
