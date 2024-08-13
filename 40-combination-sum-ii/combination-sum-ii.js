@@ -9,15 +9,15 @@ var combinationSum2 = function(candidates, target) {
 
     const res=[]
 
-     function dfs(target, start, comb){
+   function dfs(target,start,comb){
         if(target<0){
             return
         }
 
         if(target==0){
             res.push(comb.slice())
-            return
         }
+
 
         for(let i=start;i<candidates.length;i++){
 
@@ -30,11 +30,8 @@ var combinationSum2 = function(candidates, target) {
             }
 
             dfs(target-candidates[i],i+1,comb.concat(candidates[i]))
-
         }
-
-     }
-
-    dfs(target, 0, []);
-    return res
+   }
+   dfs(target, 0, []);
+   return res
 };
