@@ -3,25 +3,24 @@
  * @return {boolean}
  */
 var lemonadeChange = function(bills) {
-     let state = 0;
-    
+      let fives = 0, tens = 0;
     for (let bill of bills) {
         if (bill === 5) {
-            state++;
+            fives++;
         } else if (bill === 10) {
-            if (!(state & 0xFFFF)) return false;
-            state--;
-            state += 0x10000;
+            if (fives === 0) return false;
+            fives--;
+            tens++;
         } else { // bill === 20
-            if ((state & 0xFFFF0000) && (state & 0xFFFF)) {
-                state -= 0x10001;
-            } else if ((state & 0xFFFF) >= 3) {
-                state -= 3;
+            if (tens > 0 && fives > 0) {
+                tens--;
+                fives--;
+            } else if (fives >= 3) {
+                fives -= 3;
             } else {
                 return false;
             }
         }
     }
-    
     return true;
 };
