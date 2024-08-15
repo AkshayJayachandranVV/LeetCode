@@ -11,7 +11,7 @@ var lemonadeChange = function(bills) {
             if (fives === 0) return false;
             fives--;
             tens++;
-        } else { // bill === 20
+        } else { 
             if (tens > 0 && fives > 0) {
                 tens--;
                 fives--;
