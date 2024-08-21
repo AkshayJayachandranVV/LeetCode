@@ -4,13 +4,13 @@
  */
 var checkIfExist = function(arr) {
     
+    const seen =new Set()
+
     for(let i=0;i<arr.length;i++){
-        let value = arr[i]
-        for(let j=0;j<arr.length;j++){
-            if(arr[i] == 2 * arr[j] && i!==j){
-                return true
-            }
+        if(seen.has(arr[i] * 2) || (arr[i]%2==0 && seen.has(arr[i]/2))){
+            return true
         }
+        seen.add(arr[i])
     }
 
     return false
