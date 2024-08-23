@@ -12,7 +12,6 @@ var sumZero = function(n) {
 
     while(n>1){
         array.push(Math.floor(n/2))
-        console.log(n/2,-n/2)
         array.push(Math.ceil(-(n/2)))
         n-=2
     }
