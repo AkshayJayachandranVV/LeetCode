@@ -4,7 +4,7 @@
  */
 var sumZero = function(n) {
 
-    let sum=n,array=[]
+  let array=[]
 
    if(n%2!==0){
        array.push(0)
