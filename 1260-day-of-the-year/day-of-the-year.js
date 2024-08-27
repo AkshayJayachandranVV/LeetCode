@@ -17,12 +17,6 @@ var dayOfYear = function(date) {
 
     }
 
-
-    console.log(dateArr)
-
-
-    console.log()
-
     for(let i=0;i<Number(dateArr[1])-1;i++){
         if(i==1){
             if(isLeapYear(Number(dateArr[0]))){
