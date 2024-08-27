@@ -20,7 +20,6 @@ var dayOfYear = function(date) {
     for(let i=0;i<Number(dateArr[1])-1;i++){
         if(i==1){
             if(isLeapYear(Number(dateArr[0]))){
-                console.log("enetered")
                 days+=29
             }else{
                 days+=month[i]
