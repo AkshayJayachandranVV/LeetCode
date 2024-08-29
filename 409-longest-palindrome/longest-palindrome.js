@@ -9,8 +9,8 @@ var longestPalindrome = function(s) {
   
   for (let char of s) {
     data[char] = (data[char] || 0) + 1;
-    if (data[char] % 2 == 0) ans += 2;
+    if (data[char] % 2 == 0) ans += 2
   }
-  return s.length > ans ? ans + 1 : ans;
+  return s.length > ans ? ans + 1 : ans
 
 };
