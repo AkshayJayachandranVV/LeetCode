@@ -16,8 +16,6 @@ var dominantIndex = function (nums) {
         return -1
     }
 
-
-
     return maxIndex
 
 
