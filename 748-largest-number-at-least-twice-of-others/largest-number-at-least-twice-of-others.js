@@ -2,27 +2,27 @@
  * @param {number[]} nums
  * @return {number}
  */
-var dominantIndex = function(nums) {
+var dominantIndex = function (nums) {
 
 
-  let largest = Math.max(...nums)
+    let largest = Math.max(...nums)
 
-  let maxIndex = nums.indexOf(largest)
-  
-    nums.sort((a,b) => b-a)
+    let maxIndex = nums.indexOf(largest)
 
-    for(let i=1;i<nums.length;i++){
-        if(nums[i] * 2 > largest){
-            return -1
-        }
+    nums.sort((a, b) => b - a)
+
+
+    if (nums[1] * 2 > largest) {
+        return -1
     }
+
 
 
     return maxIndex
 
 
-    
 
-  
-    
+
+
+
 };
