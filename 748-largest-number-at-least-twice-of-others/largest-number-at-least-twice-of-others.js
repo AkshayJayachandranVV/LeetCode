@@ -12,7 +12,7 @@ var dominantIndex = function(nums) {
     nums.sort((a,b) => b-a)
 
     for(let i=1;i<nums.length;i++){
-        if(!(nums[i] * 2 <= largest)){
+        if(nums[i] * 2 > largest){
             return -1
         }
     }
