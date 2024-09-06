@@ -17,7 +17,6 @@ var modifiedList = function (nums, head) {
     let prev
 
     while (curr) {
-        console.log(curr.val)
         if (numSet.has(curr.val)) {
             if (head == curr) {
                 head = head.next
