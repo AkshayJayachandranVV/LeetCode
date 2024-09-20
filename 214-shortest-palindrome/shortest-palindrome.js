@@ -4,6 +4,7 @@
  */
 var shortestPalindrome = function(s) {
 
+    
 
     const rev = s.split("").reverse().join("")
 
