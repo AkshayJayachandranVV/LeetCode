@@ -14,21 +14,17 @@ var toGoatLatin = function(sentence) {
 
     for(let i=0;i<splitValue.length;i++){
         append+= "a"
-        console.log(splitValue[i])
         if(vowels.includes(splitValue[i][0])){
             let value = splitValue[i].split("")
             value.push(append)
             value=value.join("")
-            console.log(value,"------------")
             str+=value
         }else{
             let firstLetter = splitValue[i][0]
-            console.log(firstLetter,"fl")
             let value = splitValue[i].split("").splice(1,splitValue[i].length)
             value.push(firstLetter)
             value.push(append)
             value=value.join("")
-            console.log(value,"------------")
             str+=value
         }
 
