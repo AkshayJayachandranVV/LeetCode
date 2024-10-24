@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-
+    
     if(t.length!==s.length) return false
 
     let sCount={}
@@ -28,4 +28,6 @@ var isAnagram = function(s, t) {
         if(sCount[i]!==tCount[i]) return false
     }
    return true
+
+  
 };
