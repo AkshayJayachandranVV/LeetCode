@@ -3,10 +3,9 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    
-    let sign = x.toString().split("")
+  
 
-    if(sign[0] == "-" || sign[0] == "+"){
+    if(x<0){
         return false
     }
 
