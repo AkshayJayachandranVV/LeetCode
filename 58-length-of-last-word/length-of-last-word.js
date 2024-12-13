@@ -4,10 +4,10 @@
  */
 var lengthOfLastWord = function(s) {
 
-   let values = s.split(" ")
+    let splitValue = s.split(" ")
 
-   let avoidEmpty = values.filter((val)=>val!="")
+    const avoidSpace = splitValue.filter((val)=>val!="")
 
-   return avoidEmpty[avoidEmpty.length-1].length
+    return avoidSpace[avoidSpace.length-1].length
     
 };
